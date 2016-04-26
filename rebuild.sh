@@ -4,7 +4,6 @@
 rm -rf Documentation
 cp -pr ../../terriajs/Documentation .
 cp ../../terriajs/CONTRIBUTING.md Documentation/Contributors/
-# cp ../../terriajs/LICENSE.md Documentation
 # @Overview.md is a crappy name for each index page, but at least it sorts first.
 
 
@@ -31,3 +30,5 @@ EOF
 
 mkdocs build --clean
 mkdocs serve
+
+# 'site' directory gets pushed to the gh-pages branch
