@@ -9,9 +9,10 @@ cp ../../terriajs/CONTRIBUTING.md Documentation/Contributors/
 
 find Documentation/* -type d -exec mv '{}/README.md' '{}/@Overview.md' \;
 find Documentation -type f -exec perl -i -pe 's/\/CONTRIBUTING.md/\/Contributors\/CONTRIBUTING/g' '{}' \;
-find Documentation -type f -exec perl -i -pe 's/\/Documentation//g' '{}' \;
+find Documentation/* -type f -exec perl -i -pe 's/\/Documentation//g' '{}' \;
 find Documentation -type f -exec perl -i -pe 's/\/README.md/\/\@Overview.md/g' '{}' \;
 
+cp ../../terriajs/Documentation/README.md Documentation/ # Undo the rules above
 HOMEPAGE=Documentation/index.md
 mv Documentation/README.md "$HOMEPAGE"
 perl -i -pe 's/\(Deployment\)/(Deployment\/\@Overview)/g' "$HOMEPAGE"
