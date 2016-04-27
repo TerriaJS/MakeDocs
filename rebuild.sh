@@ -29,6 +29,6 @@ perl -i -pe 's/LICENSE.md/https:\/\/github.com\/TerriaJS\/terriajs\/blob\/master
 
 
 mkdocs build --clean
-mkdocs serve
+#mkdocs serve
 
 # 'site' directory gets pushed to the gh-pages branch
