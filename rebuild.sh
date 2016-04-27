@@ -22,11 +22,10 @@ perl -i -pe 's/\(Contributors\)/(Contributors\/\@Overview)/g' "$HOMEPAGE"
 
 perl -i -pe 's/LICENSE.md/https:\/\/github.com\/TerriaJS\/terriajs\/blob\/master\/LICENSE.md/g' "Documentation/CONTRIBUTING.md"
 
-cat <<EOF >>Documentation/index.md
-
-
-This site is built from the [TerriaJS Github repository](https://github.com/TerriaJS/TerriaJS/tree/master/Documentation).
-EOF
+#cat <<EOF >>Documentation/index.md
+#
+#This site is built from the [TerriaJS Github repository](https://github.com/TerriaJS/TerriaJS/tree/master/Documentation).
+#EOF
 
 
 mkdocs build --clean
