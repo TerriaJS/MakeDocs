@@ -21,9 +21,6 @@ pip install mkdocs
 Assuming your local TerriaJS is up to date and available at ../../terriajs:
 
 ```
-bash rebuild.sh
-
-pushd site
-git add --all . && git commit -m Update && git push
-popd 
+./rebuild.sh
+./publish.sh
 ```
