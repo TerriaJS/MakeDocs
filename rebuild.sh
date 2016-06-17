@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 # Pre-requisites: pip install mkdocs
 # Yes, this needs to be turned into a step in the TerriaJS build process, preferably not using Python.
 

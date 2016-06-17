@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 pushd ../site
 #git add .
 #git commit -m 'Update' --author 'Terria Bot <TerriaBot@users.noreply.github.com>'
