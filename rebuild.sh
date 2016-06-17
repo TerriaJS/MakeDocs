@@ -8,7 +8,7 @@ source ../env/bin/activate
 TERRIADIR=terriajs      # Where we'll copy /Documentation/ from
 WORKDIR=work            # We copy a subset of TerriaJS doco into this directory and mess around with it.
 OUTDIR=site             # Where the output directory gets built We can't actually change this - this is what mkdocs uses.
-cd ..
+pushd ..
 rm -rf $WORKDIR/*
 mkdir -p $WORKDIR
 
@@ -25,8 +25,6 @@ find ${WORKDIR} -type f -exec perl -i -pe 's/\/README.md/\/\@Overview.md/g' '{}'
 
 cd $WORKDIR
 
-pwd
-ll
 cp ../${TERRIADIR}/Documentation/README.md . # Undo the rules above
 HOMEPAGE=index.md
 mv README.md "$HOMEPAGE"
@@ -59,7 +57,4 @@ git checkout -b gh-pages
 git add .
 git commit -m 'Generate documentation' --author 'Terria Bot <TerriaBot@users.noreply.github.com>' 
 
-cd ../Documentation
-#mkdocs serve
-
-# 'site' directory gets pushed to the gh-pages branch
+popd
