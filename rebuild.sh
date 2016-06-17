@@ -55,6 +55,6 @@ cd $OUTDIR
 git init
 git checkout -b gh-pages
 git add .
-git commit -m 'Generate documentation' --author 'Terria Bot <TerriaBot@users.noreply.github.com>' 
+git commit --quiet -m 'Generate documentation' --author 'Terria Bot <TerriaBot@users.noreply.github.com>' 
 
 popd
