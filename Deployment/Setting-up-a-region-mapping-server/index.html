@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+
+	<title>Setting up a region mapping server - Terria</title>
+
+        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome-4.0.3.css" rel="stylesheet">
+        <link rel="stylesheet" href="../../css/highlight.css">
+        <link href="../../css/base.css" rel="stylesheet">
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+        
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <!-- Main title -->
+            <a class="navbar-brand" href="../..">Terria</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+            <!-- Main navigation -->
+            <ul class="nav navbar-nav">
+            
+            
+                <li >
+                    <a href="../..">Home</a>
+                </li>
+            
+            
+            
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">CatalogManagement <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        
+<li >
+    <a href="../../CatalogManagement/@Overview/">@Overview</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../../CatalogManagement/CKAN/">CKAN</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../../CatalogManagement/Format-Conversion-Service/">Format Conversion Service</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../../CatalogManagement/GeoJSON/">GeoJSON</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../../CatalogManagement/Handling-CORS/">Handling CORS</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../../CatalogManagement/Initialization-File/">Initialization File</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../../CatalogManagement/Performance-testing/">Performance testing</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../../CatalogManagement/Web-Map-Service/">Web Map Service</a>
+</li>
+
+                    
+                    </ul>
+                </li>
+            
+            
+            
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Contributors <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        
+<li >
+    <a href="../../Contributors/@Overview/">@Overview</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../../Contributors/CONTRIBUTING/">CONTRIBUTING</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../../Contributors/Contributing-to-TerriaJS/">Contributing to TerriaJS</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../../Contributors/Development-environment/">Development environment</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../../Contributors/Setting-up-Saucelabs-Locally/">Setting up Saucelabs Locally</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../../Contributors/Using-Docker/">Using Docker</a>
+</li>
+
+                    
+                    </ul>
+                </li>
+            
+            
+            
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Customizing <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        
+<li >
+    <a href="../../Customizing/@Overview/">@Overview</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../../Customizing/CKAN-previewer/">CKAN previewer</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../../Customizing/Config-JSON/">Config JSON</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../../Customizing/Extending-TerriaJS/">Extending TerriaJS</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../../Customizing/How-to-skin-a-Terria-Map/">How to skin a Terria Map</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../../Customizing/TerriaJS-URL-parameters/">TerriaJS URL parameters</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../../Customizing/TerriaJS-in-iframe/">TerriaJS in iframe</a>
+</li>
+
+                    
+                    </ul>
+                </li>
+            
+            
+            
+                <li class="dropdown active">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Deployment <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        
+<li >
+    <a href="../@Overview/">@Overview</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../Deploying-Terria-Map/">Deploying Terria Map</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../Deploying-and-building-TerriaJS/">Deploying and building TerriaJS</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../Overall-system-architecture/">Overall system architecture</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../Problems-and-Solutions/">Problems and Solutions</a>
+</li>
+
+                    
+                        
+<li class="active">
+    <a href="./">Setting up a region mapping server</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../Using-a-vector-tile-source-for-region-mapping/">Using a vector tile source for region mapping</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../WMS-Services/">WMS Services</a>
+</li>
+
+                    
+                    </ul>
+                </li>
+            
+            
+            </ul>
+
+            <!-- Search, Navigation and Repo links -->
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                        <i class="fa fa-search"></i> Search
+                    </a>
+                </li>
+                <li >
+                    <a rel="next" href="../Problems-and-Solutions/">
+                        <i class="fa fa-arrow-left"></i> Previous
+                    </a>
+                </li>
+                <li >
+                    <a rel="prev" href="../Using-a-vector-tile-source-for-region-mapping/">
+                        Next <i class="fa fa-arrow-right"></i>
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+
+        <div class="container">
+            <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+    
+        <li class="main active"><a href="#prepare-the-shapefiles">Prepare the shapefiles</a></li>
+        
+    
+        <li class="main "><a href="#set-up-geoserver">Set up GeoServer</a></li>
+        
+    
+        <li class="main "><a href="#configure-the-regions-in-your-terriajs-based-map">Configure the regions in your TerriaJS-based map</a></li>
+        
+    
+    </ul>
+</div></div>
+            <div class="col-md-9" role="main">
+
+<p><em>Region mapping</em> is the process of matching a value in a CSV file to a pre-defined boundary, such as a postcode, local government area or electorate. The allowed boundaries for a given TerriaJS instance are given in a file such as <code>wwwroot/data/regionMapping.json</code>.</p>
+<p>This is the current method to create a new set of boundaries not currently supported by TerriaJS:</p>
+<h2 id="prepare-the-shapefiles">Prepare the shapefiles</h2>
+<ul>
+<li>One shapefile should contain all the polygons. </li>
+<li>
+<p>There should be a <code>FID</code> (case-sensitive) attribute, numbering each polygon starting from 0. If no FID attribute is present, use ogr2ogr to add it: </p>
+<p><code>ogr2ogr -f "ESRI Shapefile" precincts-fid.shp precincts.shp -sql 'select FID,* from precincts'</code> </p>
+<p>If you have several files to process, use a line like this:</p>
+<p><code>for i in GCCSA IARE ILOC IREG SOS SOSR SUA UCL; do ogr2ogr -f "ESRI Shapefile" ${i}_2011_AUST_fid.shp ${i}_2011_AUST.shp -sql 'select FID,* from '"${i}_2011_AUST"; done</code></p>
+</li>
+<li>
+<p>There should be an attribute containing the identifiers you wish to match against (eg, for postcode boundaries, a <code>postcode</code> attribute containing the 4 digit codes themselves).</p>
+</li>
+<li>The projection should be EPSG:4326 (unprojected lat/long on WGS84).</li>
+</ul>
+<h2 id="set-up-geoserver">Set up GeoServer</h2>
+<ol>
+<li>
+<p>Install GeoServer. The instance used by National Map is on AWS, available at geoserver.nationalmap.nicta.com.au.</p>
+</li>
+<li>
+<p>Using the GeoServer web interface, create a data store of type <code>Directory of spatial files (shapefiles)</code>.</p>
+</li>
+<li>
+<p>Upload the shapefile (.shp, .shx, .dbf and .qix) into the appropriate directory. For National Map's server, this is <code>/mnt/data/region_map/shape_files/</code>.</p>
+</li>
+<li>
+<p>Create a style called <code>region_fid</code>. Paste the contents of <a href="https://gist.github.com/stevage/767779515f037e1d1427">this Gist</a>.</p>
+</li>
+<li>
+<p>Under <em>Layers &gt; Add a New Resource</em>, find the new shapefile name and click <em>Publish</em> </p>
+</li>
+<li>
+<p>Set these properties:</p>
+</li>
+<li>Declared SRS: EPSG:4326</li>
+<li>Click "Compute from data" and "Compute from native bounds" to set the bounding box.</li>
+<li>On the <em>Publishing</em> page, set <code>region_fid</code> as the <em>Default Style</em></li>
+</ol>
+<h2 id="configure-the-regions-in-your-terriajs-based-map">Configure the regions in your TerriaJS-based map</h2>
+<p>Modify <code>wwwroot/data/regionMapping.json</code>. Add a section like this:</p>
+<pre><code>    "SA4": {
+        "layerName":"region_map:FID_SA4_2011_AUST",
+        "server": "http://geoserver.nationalmap.nicta.com.au/region_map/ows",
+        "regionProp": "SA4_CODE11",
+        "aliases": ["sa4_code", "sa4_code", "sa4"],
+        "description": "Statistical Area Level 4"
+    },
+</code></pre>
+<ul>
+<li><code>"SA4"</code>: this identifier does not serve any machine-readable purpose outside this file.</li>
+<li><code>layerName</code>: the WMS layer of your new regions, including the workspace.</li>
+<li><code>server</code>: the URL of your GeoServer, up to and including <code>/ows</code>.</li>
+<li><code>regionProp</code>: the name of the attribute containing region identifiers that will be matched against (case-sensitive)</li>
+<li><code>aliases</code>: alias of CSV column header names that will be recognised as matching this kind of feature. Must be lowercase.</li>
+<li><code>description</code>: May be used in GUI elements and error messages.</li>
+</ul></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            
+            <center>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</center>
+        </footer>
+
+        <script src="../../js/jquery-1.10.2.min.js"></script>
+        <script src="../../js/bootstrap-3.0.3.min.js"></script>
+        <script src="../../js/highlight.pack.js"></script>
+        <script>var base_url = '../..';</script>
+        <script data-main="../../mkdocs/js/search.js" src="../../mkdocs/js/require.js"></script>
+        <script src="../../js/base.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>
+                            From here you can search these documents. Enter
+                            your search terms below.
+                        </p>
+                        <form role="form">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
+                            </div>
+                        </form>
+                        <div id="mkdocs-search-results"></div>
+                    </div>
+                    <div class="modal-footer">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

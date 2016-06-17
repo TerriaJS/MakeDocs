@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+
+	<title>Extending TerriaJS - Terria</title>
+
+        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome-4.0.3.css" rel="stylesheet">
+        <link rel="stylesheet" href="../../css/highlight.css">
+        <link href="../../css/base.css" rel="stylesheet">
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+        
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <!-- Main title -->
+            <a class="navbar-brand" href="../..">Terria</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+            <!-- Main navigation -->
+            <ul class="nav navbar-nav">
+            
+            
+                <li >
+                    <a href="../..">Home</a>
+                </li>
+            
+            
+            
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">CatalogManagement <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        
+<li >
+    <a href="../../CatalogManagement/@Overview/">@Overview</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../../CatalogManagement/CKAN/">CKAN</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../../CatalogManagement/Format-Conversion-Service/">Format Conversion Service</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../../CatalogManagement/GeoJSON/">GeoJSON</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../../CatalogManagement/Handling-CORS/">Handling CORS</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../../CatalogManagement/Initialization-File/">Initialization File</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../../CatalogManagement/Performance-testing/">Performance testing</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../../CatalogManagement/Web-Map-Service/">Web Map Service</a>
+</li>
+
+                    
+                    </ul>
+                </li>
+            
+            
+            
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Contributors <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        
+<li >
+    <a href="../../Contributors/@Overview/">@Overview</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../../Contributors/CONTRIBUTING/">CONTRIBUTING</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../../Contributors/Contributing-to-TerriaJS/">Contributing to TerriaJS</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../../Contributors/Development-environment/">Development environment</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../../Contributors/Setting-up-Saucelabs-Locally/">Setting up Saucelabs Locally</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../../Contributors/Using-Docker/">Using Docker</a>
+</li>
+
+                    
+                    </ul>
+                </li>
+            
+            
+            
+                <li class="dropdown active">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Customizing <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        
+<li >
+    <a href="../@Overview/">@Overview</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../CKAN-previewer/">CKAN previewer</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../Config-JSON/">Config JSON</a>
+</li>
+
+                    
+                        
+<li class="active">
+    <a href="./">Extending TerriaJS</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../How-to-skin-a-Terria-Map/">How to skin a Terria Map</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../TerriaJS-URL-parameters/">TerriaJS URL parameters</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../TerriaJS-in-iframe/">TerriaJS in iframe</a>
+</li>
+
+                    
+                    </ul>
+                </li>
+            
+            
+            
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Deployment <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        
+<li >
+    <a href="../../Deployment/@Overview/">@Overview</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../../Deployment/Deploying-Terria-Map/">Deploying Terria Map</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../../Deployment/Deploying-and-building-TerriaJS/">Deploying and building TerriaJS</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../../Deployment/Overall-system-architecture/">Overall system architecture</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../../Deployment/Problems-and-Solutions/">Problems and Solutions</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../../Deployment/Setting-up-a-region-mapping-server/">Setting up a region mapping server</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../../Deployment/Using-a-vector-tile-source-for-region-mapping/">Using a vector tile source for region mapping</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../../Deployment/WMS-Services/">WMS Services</a>
+</li>
+
+                    
+                    </ul>
+                </li>
+            
+            
+            </ul>
+
+            <!-- Search, Navigation and Repo links -->
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                        <i class="fa fa-search"></i> Search
+                    </a>
+                </li>
+                <li >
+                    <a rel="next" href="../Config-JSON/">
+                        <i class="fa fa-arrow-left"></i> Previous
+                    </a>
+                </li>
+                <li >
+                    <a rel="prev" href="../How-to-skin-a-Terria-Map/">
+                        Next <i class="fa fa-arrow-right"></i>
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+
+        <div class="container">
+            <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+    
+        <li class="main active"><a href="#extending-terriajs">Extending TerriaJS</a></li>
+        
+            <li><a href="#add-a-catalog-item-to-the-initial-catalog-that-is-loaded-at-startup">Add a catalog item to the initial catalog that is loaded at startup</a></li>
+        
+            <li><a href="#find-a-item-or-group-in-the-catalog">Find a item or group in the catalog</a></li>
+        
+            <li><a href="#enable-disable-hide-or-show-a-catalog-item">Enable, disable, hide, or show a catalog item</a></li>
+        
+            <li><a href="#programmatically-add-an-item-to-the-catalog">Programmatically add an item to the catalog</a></li>
+        
+            <li><a href="#add-a-new-type-of-catalog-item">Add a new type of catalog item</a></li>
+        
+            <li><a href="#add-a-new-type-of-group">Add a new type of group</a></li>
+        
+            <li><a href="#contributing">Contributing</a></li>
+        
+    
+    </ul>
+</div></div>
+            <div class="col-md-9" role="main">
+
+<h1 id="extending-terriajs">Extending TerriaJS</h1>
+<p>Here are some of the common things you'll want to do to extend TerriaJS with new behaviour.</p>
+<h3 id="add-a-catalog-item-to-the-initial-catalog-that-is-loaded-at-startup">Add a catalog item to the initial catalog that is loaded at startup</h3>
+<p>The startup list of init files loaded in a TerriaJS application is specified in the <code>initializationUrls</code> property in a config file, typically called <code>config.json</code>, that is passed to the <code>Terria.start</code> function.  If an item in <code>initializationUrls</code> ends with <code>.json</code>, it is assumed to be a relative or absolute URL to the init file.  Otherwise, the init file URL is formed as <code>'init/' + item + '.json'</code>.</p>
+<p>To add an item to the catalog, the easiest thing to do is to find a similar item in the list and mirror yours after that.  You can also find the complete list of catalog member "types" in <a href="https://github.com/TerriaJS/terriajs/blob/master/lib/Models/registerCatalogMembers.js">registerCatalogMembers.js</a>.  The list of properties that are supported by a given catalog item type can be found in each view-model class's code (for example, <a href="https://github.com/TerriaJS/terriajs/blob/master/src/Models/WebMapServiceCatalogItem.js">WebMapServiceCatalogItem</a>) and documentation (generated with <code>gulp docs</code>).</p>
+<h3 id="find-a-item-or-group-in-the-catalog">Find a item or group in the catalog</h3>
+<p>The easiest way to find an item in the catalog is to use the <code>findFirstItemByName</code> method on <code>CatalogGroupViewModel</code>:</p>
+<pre><code>var catalog = ...; // catalog is an instance of CatalogViewModel
+var topLevelGroup = catalog.group;
+var national = topLevelGroup.findFirstItemByName('National Data Sets');
+var vegetation = national.findFirstItemByName('Vegetation');
+</code></pre>
+<p>You can also loop over the individual items manually as you would any Javascript array:</p>
+<pre><code>// Find an item by inspecting descriptions.
+var myItem;
+for (var i = 0; i &lt; national.items.length; ++i) {
+    if (national.items[i].description.indexOf('foo') &gt;= 0) {
+        myItem = national.items[i];
+    }
+}
+</code></pre>
+<h3 id="enable-disable-hide-or-show-a-catalog-item">Enable, disable, hide, or show a catalog item</h3>
+<p>You can enable a catalog item programmatically just by setting its <code>isEnabled</code> property.</p>
+<pre><code>myItem.isEnabled = true;
+</code></pre>
+<p>The item will be added to the Now Viewing panel and shown on the map.</p>
+<p>You can hide it from the map (which will uncheck it in the Now Viewing panel but not remove it from that panel) by setting the <code>isShown</code> property:</p>
+<pre><code>myItem.isShown = false;
+</code></pre>
+<p>You can show or disable it in the same way:</p>
+<pre><code>myItem.isShown = true;
+myItem.isEnabled = false;
+</code></pre>
+<p>Enabling a catalog item that is already enabled but not shown will NOT cause it to be shown.</p>
+<h3 id="programmatically-add-an-item-to-the-catalog">Programmatically add an item to the catalog</h3>
+<p>To programmatically add an item to the catalog, first, find the group you want to add it to:</p>
+<pre><code>var catalog = ...; // catalog is an instance of CatalogViewModel
+var topLevelGroup = catalog.group;
+var national = topLevelGroup.findFirstItemByName('National Data Sets');
+var myGroup = national.findFirstItemByName('Vegetation');
+</code></pre>
+<p>As of this writing, the National Map user interface currently requires two levels of groups before an actual catalog item.  For example, you can put a catalog item under <code>National Data Sets -&gt; Vegetation</code> but not directly under <code>National Data Sets</code>.</p>
+<p>Next, create a new catalog item view-model of the appropriate type and set its properties.  View-models are found in <a href="../../lib/ViewModels">lib/ViewModels</a> and have <code>ItemViewModel</code> in their name.  For example:</p>
+<pre><code>var newItem = new WebMapServiceItemViewModel(catalog.application);
+newItem.name = 'An AMAZING data source!';
+newItem.description = 'This data source is so great, I can't even describe it.';
+newItem.url = 'http://geoserver.research.nicta.com.au/geotopo_250k/ows';
+newItem.layers = 'AHGFMappedStream';
+</code></pre>
+<p>The reference documentation generated by running <code>gulp docs</code> is a good source of information about the available properties of each catalog item view-model and what they mean.</p>
+<p>Finally, add the new item to the group you found earlier:</p>
+<pre><code>myGroup.add(newItem);
+</code></pre>
+<p>The user interface will automatically update to show the new item.</p>
+<h3 id="add-a-new-type-of-catalog-item">Add a new type of catalog item</h3>
+<p>You can add a new type of catalog item by extending <code>CatalogItemViewModel</code>.  The existing catalog items, such as <a href="../../lib/ViewModels/WebMapServiceItemViewModel.js">WebMapServiceItemViewModel</a> and <a href="../../lib/ViewModels/GeoJsonItemViewModel.js">GeoJsonItemViewModel</a> serve as good examples of how to do this.</p>
+<p>In order for the new data source to be configurable an init file, you also need to add it to <a href="../../lib/ViewModels/registerCatalogViewModels.js">registerCatalogViewModels.js</a> with a unique <code>type</code> identifier.</p>
+<h3 id="add-a-new-type-of-group">Add a new type of group</h3>
+<p>It is also possible to add custom catalog item group types.  This is done when you want part of your catalog to be built by querying a remote server.  For example, TerriaJS includes a a group type to retrieve data sources from a WMS server's <code>GetCapabilities</code> response.</p>
+<p>To create a custom type of group, extend <code>CatalogGroupViewModel</code>.  <a href="../../lib/ViewModels/WebMapServiceGroupViewModel.js">WebMapServiceGroupViewModel.js</a> serves as a good example of how to do this.</p>
+<p>In order for the new group to be usable in an init file, you also need to add it to <a href="../../lib/ViewModels/registerCatalogViewModels.js">registerCatalogViewModels.js</a> with a unique <code>type</code> identifier.</p>
+<h3 id="contributing">Contributing</h3>
+<p>If you add a new feature or item or group type that might be of use to other projects, please consider contributing it back as a pull request. See the <a href="../../Contributors">Contributors Guide</a>.</p></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            
+            <center>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</center>
+        </footer>
+
+        <script src="../../js/jquery-1.10.2.min.js"></script>
+        <script src="../../js/bootstrap-3.0.3.min.js"></script>
+        <script src="../../js/highlight.pack.js"></script>
+        <script>var base_url = '../..';</script>
+        <script data-main="../../mkdocs/js/search.js" src="../../mkdocs/js/require.js"></script>
+        <script src="../../js/base.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>
+                            From here you can search these documents. Enter
+                            your search terms below.
+                        </p>
+                        <form role="form">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
+                            </div>
+                        </form>
+                        <div id="mkdocs-search-results"></div>
+                    </div>
+                    <div class="modal-footer">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
