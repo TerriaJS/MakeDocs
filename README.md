@@ -1,16 +1,13 @@
 ## Documentation for TerriaJS
 
-This repository contains:
-
-- tools for building a documentation site from TerriaJS (in the `master` branch)
-- the resulting Github Pages site (in the `gh-pages` branch)
+This repository contains tools for building a documentation site from TerriaJS. The resulting Github Pages site is uploaded to `TerriaJS/Documentation`.
 
 ### Installation
 
 ```
-git clone https://github.com/TerriaJS/Documentation
-cd Documentation
-git clone --branch gh-pages git@github.com:TerriaJS/Documentation.git site
+git clone https://github.com/TerriaJS/MakeDocs
+git clone https://github.com/TerriaJS/terriajs # Or preferably use a symlink
+cd MakeDocs
 
 # Install mkdocs. Preferably you'd do this with a virtualenv.
 pip install mkdocs 
@@ -18,9 +15,7 @@ pip install mkdocs
 
 ### Updating
 
-Assuming your local TerriaJS is up to date and available at ../../terriajs:
-
 ```
-./rebuild.sh
-./publish.sh
+./rebuild.sh # This generates a ../work and a ../site directory.
+./publish.sh # Publishes the ../site directory to Github.
 ```
