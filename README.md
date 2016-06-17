@@ -10,7 +10,7 @@ This repository contains:
 ```
 git clone https://github.com/TerriaJS/Documentation
 cd Documentation
-git clone --branch gh-pages https://github.com/TerriaJS/Documentation site
+git clone --branch gh-pages git@github.com:TerriaJS/Documentation.git site
 
 # Install mkdocs. Preferably you'd do this with a virtualenv.
 pip install mkdocs 
