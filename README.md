@@ -1,6 +1,6 @@
 ## Documentation for TerriaJS
 
-This repository contains tools for building a documentation site from TerriaJS. The resulting Github Pages site is uploaded to `TerriaJS/Documentation`.
+This repository contains tools for building a documentation site from TerriaJS. The resulting Github Pages site is uploaded to `TerriaJS/Documentation`.  This is run as a cronjob on the nationalmap research server.
 
 ### Installation
 
