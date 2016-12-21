@@ -29,6 +29,7 @@ cd $WORKDIR
 cp ../${TERRIADIR}/Documentation/README.md . # Undo the rules above
 HOMEPAGE=index.md
 mv README.md "$HOMEPAGE"
+perl -i -pe 's/\(GettingStarted\)/(GettingStarted\/\@Overview)/g' "$HOMEPAGE"
 perl -i -pe 's/\(Deployment\)/(Deployment\/\@Overview)/g' "$HOMEPAGE"
 perl -i -pe 's/\(Customizing\)/(Customizing\/\@Overview)/g' "$HOMEPAGE"
 perl -i -pe 's/\(CatalogManagement\)/(CatalogManagement\/\@Overview)/g' "$HOMEPAGE"
