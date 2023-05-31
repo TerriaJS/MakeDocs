@@ -1,21 +1,7 @@
-## Documentation for TerriaJS
+# Documentation for TerriaJS
 
-This repository contains tools for building a documentation site from TerriaJS. The resulting Github Pages site is uploaded to `TerriaJS/Documentation`.  This is run as a cronjob on the nationalmap research server.
+You can find TerriaJS documentation at https://docs.terria.io and edit the documentation in markdown files in 
+https://github.com/TerriaJS/terriajs/tree/main/doc.
 
-### Installation
-
-```
-git clone https://github.com/TerriaJS/MakeDocs
-git clone https://github.com/TerriaJS/terriajs # Or preferably use a symlink
-cd MakeDocs
-
-# Install mkdocs. Preferably you'd do this with a virtualenv.
-pip install mkdocs 
-```
-
-### Updating
-
-```
-./rebuild.sh # This generates a ../work and a ../site directory.
-./publish.sh # Publishes the ../site directory to Github.
-```
+_This repository used to host configuration for building TerriaJS documentation, however that is now inside the [terriajs 
+repository](https://github.com/TerriaJS/terriajs)._
